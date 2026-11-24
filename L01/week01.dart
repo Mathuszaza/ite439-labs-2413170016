@@ -1,6 +1,6 @@
 // ============================================================
 // L01 — Dart พื้นฐาน (ITE-439 สัปดาห์ที่ 1)
-// ชื่อ-สกุล: ______________________  รหัสนักศึกษา: ____________
+// ชื่อ-สกุล: Mathus Srichat  รหัสนักศึกษา: 2413170016
 // ============================================================
 //
 // วิธีทำ
@@ -45,7 +45,9 @@ void main() {
 // ------------------------------------------------------------
 String bmi(double weight, double height) {
   // TODO: เขียนโค้ดตรงนี้
-  return '';
+  double height2 = height*height;
+  double bmi = weight/height2;
+  return bmi.toStringAsFixed(2);
 }
 
 // ------------------------------------------------------------
@@ -60,17 +62,20 @@ String bmi(double weight, double height) {
 // ------------------------------------------------------------
 String average(List<int> numbers) {
   // TODO
-  return '';
+  double average = numbers.reduce((a,b)=>a+b)/numbers.length;
+  return average.toStringAsFixed(2);
 }
 
 int highest(List<int> numbers) {
   // TODO
-  return 0;
+  int maxV = numbers.reduce((a,b)=>a>b?a:b);
+  return maxV;
 }
 
 int lowest(List<int> numbers) {
   // TODO
-  return 0;
+  int minV = numbers.reduce((a,b)=>a<b?a:b);
+  return minV;
 }
 
 // ------------------------------------------------------------
